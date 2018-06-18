@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+// @dropDown : true;
+
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    // nav{
+    //
+    // }
+    .navbar-default{
+      height: 5%;
+      margin: 0;
+      .navbar-form{
+        input:focus{
+          background-color: rgba(188, 239, 241, 0.2);
+          border-color: rgba(64, 40, 48, 0.4);
+        }
+        button:active{
+          color: rgba(0, 119, 186, 0.5);
+        }
+      }
+
+      .navbar-nav {
+
+        > li {
+          margin: 0;
+          margin-right: 0.75em;
+          a{
+            font-size: 1.2em;
+            &:link {
+              color: rgba(0, 119, 186, 0.5);
+            }
+            &:visited{
+              color: rgba(0, 119, 186, 0.5);
+            }
+            &:hover{
+              color: rgba(0, 163, 255, 1);
+            }
+            &:active{
+              color: rgba(0, 119, 186, 1);
+            }
+          }
+        }
+      }
+
+      .navbar-header{
+        .navbar-brand {
+          img{
+            height: 2em;
+            margin-top: -0.5em;
+            margin-left: 1em;
+          }
+        }
+
+        .navbar-toggle {
+        }
+      }
+
+      .navbar-collapse, .navbar-form {
+        background-color: rgb(242, 242, 242);
+        border-color: rgba(90, 130, 142, 0.38);
+        //poner la tuerca y cerrar cesion en el centro.
+      }
+    }
+    .container-fluid {
+      padding: 0;
+      margin: 0;
+      height: 95%;
+      margin-top: 3.6em;
+      .row {
+        margin: 0;
+        padding: 0;
+
+      }
+    }
+  }
+}
+
+
+#left{
+  height: 100vh;
+  position: fixed;
+  margin:0;
+  padding:0;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(184, 184, 184, 0.2);
+  ul{
+    margin:0;
+    padding: 0;
+    margin-top: 4em;
+    li{
+      margin: 0.5em 1.5em;
+      padding: 0;
+      text-align: center;
+      &:not(.active){
+        a{
+          &:hover{
+            background-color: rgba(164, 164, 164, 0.5);
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px){
+    position: absolute;
+    display: none;
+  }
+}
+
+
+
+#right{
+  margin: 0;
+  padding: 1em;
+  height: auto;
+  float: right;
+  @media screen and (max-width: 992px){
+    float: none;
+  }
+}
+
+.tab-content{
+  #nav768{
+    display: none;
+    @media screen and (max-width: 768px){
+      margin: 0;
+      margin-bottom: 1em;
+      display: flex;
+      li {
+        display: flex;
+        flex: 1 1 auto;
+        a {
+          display: flex;
+          justify-content: center;
+          flex: 1 1 auto;
+        }
+      }
+    }
+  }
+
+  #datos{
+    .page-header{
+      text-align: center;
+      color: rgb(36, 120, 203);
+      border-style: none;
+      border-bottom: 1px solid rgba(129, 25, 25, 0.7);
+      img{
+        height: 1em;
+        width: 1em;
+      }
+    }
+
+    .jumbotron{
+      padding: 0.75em;
+      background-color: rgba(109, 147, 97, 0.3);
+      label{
+        border: 2px solid rgb(76, 125, 89);
+        background-color: rgba(0, 255, 117, 0.67);
+        color: black;
+        text-decoration: none;
+        border-radius: 4em;
+        padding: 0.1em 0.5em;
+        font-size: 0.95em;
+        cursor: pointer;
+      }
+
+      .file-input {
+        display: none;
+      }
+
+      #foto_div{
+        text-align: center;
+        #foto_perfil{
+          height: 10em;
+          position: relative;
+          margin-top: -1em;
+        }
+        label{
+          position: absolute;
+          margin-top: -1em;
+          margin-left: 3em;
+          border: 2px solid rgb(76, 125, 89);
+          background-color: rgba(16, 123, 162, 0.58);
+          z-index: 1;
+          img{
+            height: 2em;
+            width: 1.5em
+          }
+        }
+      }
+
+    }
+
+    hr{
+      margin: 0 auto;
+      padding: 0;
+      width: 50%;
+      border-style: none;
+      border-bottom: 1px solid rgba(129, 25, 25, 0.7);
+    }
+
+    .form-group{
+      margin: 3em 10em;
+      label{
+        color: rgb(36, 120, 203);
+      }
+      input, select{
+          color: black;
+          background-color: transparent;
+          border-color: rgba(129, 25, 25, 0.2);
+          box-shadow: none;
+      }
+      .oculto{
+        display: none;
+      }
+      @media screen and (max-width: 767px){
+        margin: 3em 4em;
+        label{
+          font-size: 0.75em;
+        }
+        .pull-right{
+          display: none;
+        }
+        .oculto{
+          display: block;
+        }
+      }
+    }
+  }
+
+}

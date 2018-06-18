@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    .container-fluid {
+      padding: 0;
+      margin: 0;
+      height: 95%;
+      margin-top: 3.6em;
+      .row {
+        margin: 0;
+        padding: 0;
+
+      }
+    }
+  }
+}
+
+
+#left{
+  height: 100vh;
+  position: fixed;
+  margin:0;
+  padding: 1em;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(184, 184, 184, 0.2);
+
+  @media screen and (max-width: 992px){
+    position: absolute;
+    display: none;
+  }
+}
+
+#formulario_controladoresL, #formulario_controladoresR{
+  margin-top: 2em;
+  .form-group{
+    margin: 1.5em 0;
+    label{
+      color: rgb(49, 164, 185);
+    }
+  }
+}
+
+
+#right{
+  margin: 0;
+  padding: 1em;
+  height: auto;
+  float: right;
+  @media screen and (max-width: 992px){
+    float: none;
+  }
+  #controladores{
+    display: none;
+    @media screen and (max-width: 992px){
+      // position: absolute;
+      display: block;
+    }
+  }
+  input[id="busqueda"] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../img/app/searchicon.svg');
+    background-size: 25px 12px;
+    background-position: 7px 18px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    &:focus {
+      width: 100%;
+    }
+  }
+
+  #pieBusqueda{
+    margin: 0;
+    padding: 0;
+    margin-top: 1.5em;
+    .total_naranja{
+      color: orange;
+    }
+    .medio_naranja{
+      color: rgba(255, 158, 0, 0.5);
+    }
+    #panel-total{
+      .panel-default{
+        .panel-heading{
+          img{
+            height: 3em;
+            width: 3em;
+            cursor: pointer;
+          }
+        }
+      }
+      .panel-success{
+        width: 100%;
+        .doc_subido{
+          img{
+            height: 3em;
+            width: 3em;
+            cursor: pointer;
+          }
+        }
+        @media screen and (max-width: 992px){
+          .doc_subido{
+            img{
+              height: 4em;
+              width: 4em;
+            }
+          }
+          display: block;
+        }
+
+      }
+    }
+
+  }
+
+}
+
+.navbar{
+  background-color: rgb(212, 190, 197);
+  border-bottom: rgb(78, 78, 78);
+
+  .navbar-brand {
+    img{
+      height: 5em;
+      cursor: pointer;
+      transform: scale(0.5,0.5);
+      margin-top: -1.9em;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .navbar-nav {
+
+    > li {
+      background-color: transparent;
+      > a {
+        text-decoration: none;
+        color: white;
+
+        border-radius: .25rem;
+        // height: 4em;
+        margin: 0 1.5em;
+        &:link {
+          color: white;
+          background-color: rgba(131, 131, 131, 0.4);
+        }
+        &:visited{
+          color: rgba(255, 255, 255, 0.5);
+          background-color: rgba(131, 131, 131, 0.4);
+        }
+        &:hover{
+          color: rgba(255, 255, 255, 0.75);
+          background-color: rgba(131, 131, 131, 0.75);
+        }
+
+        &:active{
+          color: rgba(255, 255, 255, 1);
+          background-color: rgba(131, 131, 131, 1);
+        }
+      }
+    }
+  }
+
+  .navbar-toggle {
+      text-decoration: none;
+      // color: white;
+      // background-color: rgba(0, 0, 0, 0.41);
+      border-radius: .25rem;
+      margin: 0 1.5em;
+      &:link {
+        color: white;
+        background-color: rgba(131, 131, 131, 0.4);
+      }
+      &:visited{
+        color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(131, 131, 131, 0.4);
+      }
+      &:hover{
+        color: rgba(255, 255, 255, 0.75);
+        background-color: rgba(131, 131, 131, 0.75);
+      }
+
+      &:active{
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(131, 131, 131, 1);
+      }
+  }
+}

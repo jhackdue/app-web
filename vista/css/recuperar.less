@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.row{
+  font-family: 'Roboto', sans-serif;
+  .logo{
+    text-align: center;
+    margin: 3em;
+    img{
+      height: 4em;
+    }
+  }
+  h1 {
+    color: rgba(0, 0, 0, 0.58);
+    img{
+      height: 1em;
+    }
+  }
+
+  .formulario{
+
+    text-align: center;
+    .form-group{
+      text-align: center;
+      margin: 4% 20%;
+      label{
+        color: rgba(0, 0, 0, 0.58);
+      }
+      input{
+        border: none;
+        border-bottom: 0.01px solid rgba(97, 209, 228, 0.61);
+        outline: none;
+        box-shadow: none;
+        &:focus{
+          border-color: rgba(97, 209, 228, 0.9);
+          + label{
+            color: rgba(0, 0, 0, 0.9);
+          }
+        }
+      }
+    }
+  }
+
+  .alert{
+    margin: 2em auto;
+    width: 70%;
+    display: none;
+  }
+}

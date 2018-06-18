@@ -1,0 +1,400 @@
+@charset "UTF-8";
+
+// @dropDown : true;
+
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  body {
+    height: 100%;
+    overflow: visible;
+    font-family: 'Roboto', sans-serif;
+    .container-fluid {
+      height: 100%;
+      padding-left: 0px;
+      padding-right: 0px;
+
+      .row {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+
+      #div_uno {
+        text-align: center;
+        .jumbotron{
+          img{
+            height: 5em;
+          }
+          margin: 0;
+          margin-top: 5em;
+          text-align: center;
+          font-weight: bold;
+          background-color: rgba(61, 255, 0, 0.3);
+        }
+
+        .nav-justified{
+          display: none;
+          @media screen and (max-width: 768px){
+            margin: 0;
+            margin-bottom: 1em;
+            display: flex;
+            li {
+              display: flex;
+              flex: 1 1 auto;
+              a {
+                display: flex;
+                justify-content: center;
+                flex: 1 1 auto;
+              }
+            }
+          }
+        }
+      }
+
+      #div_dos{
+        #contenido_publicaciones{
+          padding: 0;
+          margin: 1em;
+        }
+      }
+
+      #div_tres{
+        #contenido_apuntes{
+          padding: 0;
+          margin: 1em;
+        }
+
+      }
+
+
+      #cont-ipad-768{
+        display: none;
+        @media screen and (max-width: 768px){
+          display: block;
+          margin: 0;
+          padding: 0;
+          height: auto;
+        }
+
+      }
+
+
+
+      @media screen and (max-width: 768px){
+        #div_dos {
+          display: none;
+        }
+
+        #div_tres {
+          display: none;
+        }
+      }
+
+      #contenido_publicaciones{
+
+        #nav_publicaciones{
+          display: flex;
+          flex-flow: row wrap;
+          li {
+            display: flex;
+            flex: 1;
+            a {
+              display: flex;
+              justify-content: center;
+              flex: 1;
+            }
+          }
+        }
+        .tab-content{
+          #documentos2, #documentos{
+            #comoMostrar_documentos{
+              padding: 0;
+              margin: 1em 0;
+            }
+
+            .panel-group{
+              .panel{
+                margin: 1em 2em;
+                @media screen and (max-width: 768px){
+                  margin: 1.5em 0;
+                }
+                .panel-heading{
+                  a{
+                    font-size: 0.85em;
+                    text-decoration: none;
+                    img{
+                      height: 3em;
+                      width: 3em;
+                      position: relative;
+                    }
+                  }
+                  .badge{
+                    position: absolute;
+                    z-index: 9999 !important;
+                    margin-left: -3.5em;
+                    margin-top: 2em;
+                    font-size: 0.9em;
+                    background-color: rgba(0, 79, 255, 0.85);
+                  }
+
+                }
+
+                .panel-body{
+                  margin: 0;
+                  padding: 0;
+                  .doc_subido{
+                    margin: 0;
+                    padding: 1em;
+                    a{
+                      font-size: 0.85em;
+                      text-decoration: none;
+                      img{
+                        height: 5em;
+                        width: 4em;
+                        //position: absolute;
+                      }
+                    }
+                  }
+                  .panel-footer{
+                    img{
+                      height: 3em;
+                      width: 3em;
+                    }
+                  }
+
+                }
+              }
+
+              .total_naranja{
+                color: orange;
+              }
+              .medio_naranja{
+                color: rgba(255, 158, 0, 0.5);
+              }
+            }
+          }
+
+          #contenido_contactos{
+            margin: 1em 0;
+            .panel-title{
+              text-align: center;
+            }
+            .panel-body{
+              text-align: center;
+            }
+            .form-group{
+              margin: 1em;
+              label{
+                color: rgb(36, 120, 203);
+              }
+              input, select{
+                color: black;
+                background-color: transparent;
+                border-color: rgba(129, 25, 25, 0.2);
+                box-shadow: none;
+                option{
+                  text-align: center;
+                }
+              }
+              @media screen and (max-width: 768px){
+                margin: 2em;
+                label{
+                  font-size: 0.75em;
+                }
+              }
+            }
+            #pieContactos768, #pieContactos{
+
+            }
+          }
+          #contenido_mensajes{
+            margin: 1em 0;
+            .panel-title{
+              text-align: center;
+            }
+            .panel-body{
+              text-align: center;
+            }
+            .form-group{
+              margin: 1em;
+              label{
+                color: rgb(36, 120, 203);
+              }
+              input, select{
+                color: black;
+                background-color: transparent;
+                border-color: rgba(129, 25, 25, 0.2);
+                box-shadow: none;
+                option{
+                  text-align: center;
+                }
+              }
+              @media screen and (max-width: 768px){
+                margin: 2em;
+                label{
+                  font-size: 0.75em;
+                }
+              }
+            }
+            #pieRecibidos768, #pieRecibidos{
+              .panel-default{
+                .panel-heading{
+                  p{
+                    font-size: 0.8em;
+                    color: rgba(0, 0, 0, 0.6);
+                  }
+                }
+                .panel-collapse{
+                  .panel-body{
+
+                  }
+                }
+              }
+            }
+          }
+
+        }
+
+      }
+
+      #contenido_apuntes{
+        .panel-title{
+          text-align: center;
+        }
+        .form-group{
+          margin: 3em 1em;
+          label{
+            color: rgb(36, 120, 203);
+          }
+          input, select{
+            color: black;
+            background-color: transparent;
+            border-color: rgba(129, 25, 25, 0.2);
+            box-shadow: none;
+            option{
+              text-align: center;
+            }
+          }
+          @media screen and (max-width: 768px){
+            margin: 2em;
+            label{
+              font-size: 0.75em;
+            }
+          }
+        }
+        .panel-footer{
+          .list-group{
+            a{
+              background-color: rgba(87, 238, 39, 0.15);
+              &:hover{
+                background-color: rgba(87, 238, 39, 0.6);
+              }
+              margin: 0.75em 5em;
+              @media screen and (max-width: 768px){
+                margin: 0.25em 1em;
+              }
+            }
+          }
+          .modal-body{
+            .form-group{
+              padding: 0;
+              margin: 0.2em 5em 2em 5em;
+              .pull-right{
+                display: block;
+              }
+            }
+          }
+          .modal-footer{
+            .loader {
+              display: none;
+              border: 1px solid #f3f3f3;
+              border-radius: 2em;
+              border-top: 1px solid blue;
+              border-bottom: 1px solid blue;
+              width: 1em;
+              height: 1em;
+              animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+            .ocultar{
+              display: none;
+            }
+            //lo que tienes que preguntar en mostrar_busqueda es si p tiene la clase mostrar o no de eso depende si volvemos a resetear
+          }
+        }
+      }
+
+    }
+  }
+
+  .navbar-default{
+
+    .navbar-form{
+      .input-group{
+        width: 25em;
+        @media screen and (max-width: 768px){
+          width: 100%;
+        }
+
+        input{
+          &:focus{
+            background-color: rgba(188, 239, 241, 0.2);
+            border-color: rgba(64, 40, 48, 0.4);
+          }
+
+        }
+      }
+      button:active{
+        color: rgba(0, 119, 186, 0.5);
+      }
+    }
+
+    .navbar-nav {
+
+      > li {
+        margin: 0;
+        margin-right: 0.75em;
+        a{
+          font-size: 1.2em;
+          &:link {
+            color: rgba(0, 119, 186, 0.5);
+          }
+          &:visited{
+            color: rgba(0, 119, 186, 0.5);
+          }
+          &:hover{
+            color: rgba(0, 163, 255, 1);
+          }
+          &:active{
+            color: rgba(0, 119, 186, 1);
+          }
+        }
+      }
+    }
+
+    .navbar-header{
+      .navbar-brand {
+        img{
+          height: 2em;
+          margin-top: -0.5em;
+          margin-left: 1em;
+        }
+      }
+
+      .navbar-toggle {
+
+      }
+    }
+
+    .navbar-collapse, .navbar-form {
+      border-color: rgba(90, 130, 142, 0.38);
+      //poner la tuerca y cerrar cesion en el centro.
+    }
+  }
+}
